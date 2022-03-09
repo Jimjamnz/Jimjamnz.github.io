@@ -1,11 +1,11 @@
 function init() {
-fetch("files/quotesSource.txt")
+fetch("../files/quotesSource.txt")
 .then(response => response.text())
 .then(textString => {
 quotesSource = textString.split(/\r\n|\r|\n/);
 });
 
-fetch("files/quotes.txt")
+fetch("../files/quotes.txt")
 .then(fetch("files/quotesSource.txt"))
 .then(response => response.text())
 .then(textString => {
